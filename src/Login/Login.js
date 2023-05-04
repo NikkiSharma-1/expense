@@ -1,12 +1,10 @@
 import React from 'react';
 import { useState,useRef } from "react";
-import { useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import classes from "./Login.module.css";
 
 function Login() {
-    const dispatch=useDispatch()
-    const history = useHistory();
+    const navigate = useNavigate();
     const emailInputRef = useRef();
     const passwordInputRef = useRef();
     const confirmPasswordInputRef = useRef();
@@ -18,7 +16,7 @@ function Login() {
       setIsLogin((prevState) => !prevState);
     };
     const passwordHandler=(props)=>{
-      history.replace('./passwdreset')
+      navigate('./passwdreset' ,{replace:true})
   
     }
   

@@ -17,7 +17,7 @@ const Welcome = (props) => {
     history.replace("/profile");
   };
 
-  const logoutHandler = () => {
+  const logOutHandler = () => {
     dispatch(authActions.logout());
     console.log("Logged out successfully");
     dispatch(expenseActions.removeEmail());
@@ -75,7 +75,7 @@ const Welcome = (props) => {
           {" "}
           Complete now{" "}
         </button>
-        <button className={classes.logout} onClick={logoutHandler}>
+        <button className={classes.logout} onClick={logOutHandler}>
           {" "}
           Logout{" "}
         </button>

@@ -2,10 +2,12 @@ import { useEffect } from "react";
 import { Route,Switch } from "react-router-dom";
 import Login from "./Login/Login";
 import Welcome from "./Welcome/Welcome";
+import Expense from "./Expenses/Expense";
 import Profile from "./Profile/Profile";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { expenseActions } from "./Store/expense.slice";
+import ResetPassword from "./ResetPassword/ResetPassword";
 
 
 function App() {
@@ -61,6 +63,15 @@ function App() {
 
         <Route path="/profile">
           <Profile />
+        </Route>
+
+        
+        <Route path="/passwdreset">
+          <ResetPassword />
+        </Route>
+
+        <Route path="/expense">
+          <Expense />
         </Route>
       </Switch>
     </main>
